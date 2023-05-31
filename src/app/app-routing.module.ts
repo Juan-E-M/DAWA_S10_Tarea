@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioComponent } from './formulario/formulario.component';
+import { DestinoComponent } from './destino/destino.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'formulario', component: FormularioComponent },
+  { path: 'destino', component: DestinoComponent },
+  { path: '', redirectTo: '/formulario', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
